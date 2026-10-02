@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/userImg"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/fullCornerImage"
+        android:src="@drawable/ic_person" />
+
+    <TextView
+        android:id="@+id/userNameTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="User Name"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/ratingBar"
+        app:layout_constraintStart_toEndOf="@+id/userImg"
+        app:layout_constraintTop_toTopOf="@+id/userImg" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:progressTint="@color/blue"
+        app:layout_constraintBottom_toBottomOf="@+id/userNameTxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/userNameTxt" />
+
+    <TextView
+        android:id="@+id/commentTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="User comment goes here..."
+        android:textColor="?android:attr/textColorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/userNameTxt"
+        app:layout_constraintTop_toBottomOf="@+id/userNameTxt" />
+
+    <TextView
+        android:id="@+id/dateTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Date"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/commentTxt"
+        app:layout_constraintTop_toBottomOf="@+id/commentTxt" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/lightGrey"
+        app:layout_constraintTop_toBottomOf="@id/dateTxt" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

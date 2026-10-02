@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorSurface"
+        app:elevation="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="16dp">
+
+            <ImageView
+                android:id="@+id/backBtn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/premium_icon_bg"
+                android:padding="10dp"
+                android:src="@drawable/back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/premium_blue_primary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Doctor Profile"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/backBtn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/backBtn" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:paddingBottom="100dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/doctorImg"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/profile"
+                app:shapeAppearanceOverlay="@style/fullCornerImage" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:text="Tap to change photo"
+                android:textSize="12sp" />
+
+            <!-- Profile Info Fields -->
+            <EditText
+                android:id="@+id/nameEt"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/edittext_bg"
+                android:hint="Full Name"
+                android:paddingHorizontal="16dp" />
+
+            <EditText
+                android:id="@+id/specialEt"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/edittext_bg"
+                android:hint="Specialization"
+                android:paddingHorizontal="16dp" />
+
+            <EditText
+                android:id="@+id/educationEt"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/edittext_bg"
+                android:hint="Education"
+                android:paddingHorizontal="16dp" />
+
+            <EditText
+                android:id="@+id/experienceEt"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/edittext_bg"
+                android:hint="Years of Experience"
+                android:inputType="number"
+                android:paddingHorizontal="16dp" />
+
+            <EditText
+                android:id="@+id/locationEt"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/edittext_bg"
+                android:hint="Clinic/Hospital Location"
+                android:paddingHorizontal="16dp" />
+
+            <EditText
+                android:id="@+id/priceEt"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/edittext_bg"
+                android:hint="Consultation Fee (৳)"
+                android:inputType="number"
+                android:paddingHorizontal="16dp" />
+
+            <EditText
+                android:id="@+id/languagesEt"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/edittext_bg"
+                android:hint="Languages (e.g. English, Bangla)"
+                android:paddingHorizontal="16dp" />
+
+            <EditText
+                android:id="@+id/biographyEt"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/edittext_bg"
+                android:gravity="top"
+                android:hint="Biography"
+                android:padding="16dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/reviewsBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/light_blue_bg"
+                android:text="My Reviews &amp; Ratings"
+                android:textAllCaps="false"
+                android:textColor="@color/blue"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/earningsBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/light_grey_bg"
+                android:text="View Earnings"
+                android:textAllCaps="false"
+                android:textColor="?android:attr/textColorSecondary"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/saveBtn"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom"
+        android:layout_margin="24dp"
+        android:background="@drawable/blue_btn_bg"
+        android:text="Save Changes"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

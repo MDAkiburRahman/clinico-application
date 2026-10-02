@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "678471021757",
+    "firebase_url": "https://clinico-2a26da33-default-rtdb.firebaseio.com",
+    "project_id": "clinico-2a26da33",
+    "storage_bucket": "clinico-2a26da33.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:678471021757:android:bd8a42ffec739ef19e33d4",
+        "android_client_info": {
+          "package_name": "com.example.clinico"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBApZ535Q0xnGzvqTeoOw597vcHlch_TPk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

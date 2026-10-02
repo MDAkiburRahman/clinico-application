@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/doctorImg"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/cornorImage"
+            android:src="@drawable/ic_person" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/doctorNameTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Doctor Name"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/patientNameTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Patient Name"
+                android:textColor="?android:attr/textColorSecondary"
+                android:textSize="14sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/specializationTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Specialization"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/dateTimeTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:drawableStart="@drawable/bottom_btn2"
+                android:drawablePadding="4dp"
+                android:text="Date | Time"
+                android:textColor="@color/blue"
+                android:textSize="14sp"
+                app:tint="@color/blue" />
+
+            <TextView
+                android:id="@+id/statusTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/light_blue_bg"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="2dp"
+                android:text="Status"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/rejectionNoteTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Reason: ..."
+                android:textColor="@color/red"
+                android:textSize="12sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/optionsBtn"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_edit"
+            app:tint="@color/blue" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="8dp"
+    android:background="@drawable/premium_card_bg"
+    android:elevation="2dp"
+    android:padding="16dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/doctorImg"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_person"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/fullCornerImage" />
+
+    <TextView
+        android:id="@+id/doctorNameTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="Dr. Alisha Sharma"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/callBtn"
+        app:layout_constraintStart_toEndOf="@+id/doctorImg"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/specializationTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Cardiologist"
+        android:textColor="?android:attr/textColorSecondary"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/doctorNameTxt"
+        app:layout_constraintStart_toStartOf="@+id/doctorNameTxt"
+        app:layout_constraintTop_toBottomOf="@+id/doctorNameTxt" />
+
+    <ImageView
+        android:id="@+id/callBtn"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:background="@drawable/premium_icon_bg"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_person"
+        app:tint="@color/premium_blue_primary" />
+
+    <LinearLayout
+        android:id="@+id/detailsLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/doctorImg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                app:srcCompat="@drawable/bottom_btn2"
+                app:tint="@color/premium_blue_primary" />
+
+            <TextView
+                android:id="@+id/dateTimeTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="10:30 AM | Oct 26"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                app:srcCompat="@drawable/ic_person"
+                app:tint="@color/premium_text_gray" />
+
+            <TextView
+                android:id="@+id/locationTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="MediClinic Downtown"
+                android:textColor="?android:attr/textColorSecondary"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/actionBtn"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/blue_btn_bg"
+        android:backgroundTint="@color/premium_blue_primary"
+        android:text="Call Doctor"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/detailsLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

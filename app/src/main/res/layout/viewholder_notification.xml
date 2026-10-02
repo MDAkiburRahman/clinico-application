@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:padding="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/iconContainer"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:background="@drawable/premium_icon_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/notificationIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/bell_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/premium_blue_primary" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/titleTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="Notification Title"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/timeTxt"
+        app:layout_constraintStart_toEndOf="@+id/iconContainer"
+        app:layout_constraintTop_toTopOf="@+id/iconContainer" />
+
+    <TextView
+        android:id="@+id/messageTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="This is a notification message that explains what happened in the app."
+        android:textColor="?android:attr/textColorSecondary"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/titleTxt"
+        app:layout_constraintTop_toBottomOf="@+id/titleTxt" />
+
+    <TextView
+        android:id="@+id/timeTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12:00 PM"
+        android:textColor="?android:attr/textColorSecondary"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/titleTxt" />
+
+    <View
+        android:id="@+id/unreadDot"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/circle_shimmer"
+        android:backgroundTint="@color/premium_notification"
+        app:layout_constraintBottom_toBottomOf="@+id/timeTxt"
+        app:layout_constraintEnd_toStartOf="@+id/timeTxt"
+        app:layout_constraintTop_toTopOf="@+id/timeTxt" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="?android:attr/dividerVertical"
+        app:layout_constraintTop_toBottomOf="@+id/messageTxt" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,40 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Clinico" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/skyBlue</item>
+        <item name="colorOnSecondary">@color/white</item>
+
+        <item name="android:windowBackground">@color/theme_background</item>
+        <item name="colorSurface">@color/theme_surface</item>
+        <item name="colorOnSurface">@color/theme_on_surface</item>
+
+        <!-- Text Colors -->
+        <item name="android:textColorPrimary">@color/theme_text_primary</item>
+        <item name="android:textColorSecondary">@color/theme_text_secondary</item>
+
+        <!-- EditText Styles -->
+        <item name="android:editTextColor">@color/theme_text_primary</item>
+        <item name="android:textColorHint">@color/theme_text_secondary</item>
+    </style>
+
+    <style name="Theme.Clinico" parent="Base.Theme.Clinico" />
+
+    <style name="cornorImage">
+        <item name="cornerSize">10dp</item>
+        <item name="cornerFamily">rounded</item>
+    </style>
+
+    <style name="fullCornerImage">
+        <item name="cornerSize">50%</item>
+        <item name="cornerFamily">rounded</item>
+    </style>
+
+    <style name="DrawerRoundedStyle">
+        <item name="cornerSizeTopRight">28dp</item>
+        <item name="cornerSizeBottomRight">28dp</item>
+        <item name="cornerFamily">rounded</item>
+    </style>
+</resources>

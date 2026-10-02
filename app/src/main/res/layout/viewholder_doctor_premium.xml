@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="8dp"
+    android:background="@drawable/premium_card_bg"
+    android:elevation="2dp"
+    android:padding="16dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/doctorImg"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_person"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/fullCornerImage" />
+
+    <TextView
+        android:id="@+id/doctorNameTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Dr. Sarah Johnson"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/doctorImg"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/specializationTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Cardiologist"
+        android:textColor="?android:attr/textColorSecondary"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/doctorNameTxt"
+        app:layout_constraintStart_toStartOf="@+id/doctorNameTxt"
+        app:layout_constraintTop_toBottomOf="@+id/doctorNameTxt" />
+
+    <LinearLayout
+        android:id="@+id/ratingLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@+id/doctorNameTxt"
+        app:layout_constraintTop_toBottomOf="@+id/specializationTxt">
+
+        <ImageView
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:src="@drawable/star"
+            app:tint="#FFC107" />
+
+        <TextView
+            android:id="@+id/ratingTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="4.9"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/reviewTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="· 190 Reviews"
+            android:textColor="?android:attr/textColorSecondary"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/premium_border"
+        app:layout_constraintTop_toBottomOf="@+id/doctorImg" />
+
+    <LinearLayout
+        android:id="@+id/footerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/divider">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Experience"
+                android:textColor="?android:attr/textColorSecondary"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/experienceTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10+ Years"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fee"
+                android:textColor="?android:attr/textColorSecondary"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/feeTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="৳1,200"
+                android:textColor="@color/premium_blue_primary"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/viewProfileBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:background="@drawable/blue_btn_bg"
+            android:backgroundTint="@color/premium_blue_primary"
+            android:paddingHorizontal="16dp"
+            android:text="View Profile"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

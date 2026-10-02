@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Clinico</string>
+    <string name="schedule_appointment_n_with_ease">Schedule Appointment\n with Ease</string>
+    <string name="how_are_you_today">How Are You Today?</string>
+    <string name="hi_akibur">Hi, Akibur</string>
+    <string name="experience_years">%1$d Years</string>
+    <string name="app_logo_desc">App Logo</string>
+    <string name="all_categories">All Categories</string>
+    <string name="back">Back</string>
+    <string name="notifications">Notifications</string>
+    <string name="no_notifications">No notifications yet</string>
+</resources>
